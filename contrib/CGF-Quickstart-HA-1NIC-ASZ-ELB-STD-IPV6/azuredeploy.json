@@ -18,44 +18,49 @@
       "type": "string",
       "metadata": {
           "description": "Network range of the VNET (e.g. 172.16.136.0/22)"
-      }
+      },
+      "defaultValue": "172.16.136.0/22"
     },
         "vNetAddressSpacev6": {
       "type": "string",
       "metadata": {
-          "description": "Network range of the VNET (e.g. 172.16.136.0/22)"
-      }
+          "description": "Network range of the VNET (e.g. fd4d:d0ea:8475::/48)"
+      },
+      "defaultValue": "fd4d:d0ea:8475::/48"
     },
     "subnetCGF": {
       "type": "string",
       "metadata": {
         "description": "Network range of the Subnet containing the NextGen Firewall (e.g. 172.16.136.0/24)"
-      }
+      },
+      "defaultValue": "172.16.136.0/24"
     },
     
         "subnetCGFv6": {
       "type": "string",
       "metadata": {
-        "description": "Network range of the Subnet containing the NextGen Firewall (e.g. 172.16.136.0/24)"
-      }
+        "description": "Network range of the Subnet containing the NextGen Firewall (e.g. fd4d:d0ea:8475:1::/64)"
+      },
+      "defaultValue": "fd4d:d0ea:8475:1::/64"
     },
     "subnetRed": {
       "type": "string",
       "metadata": {
-        "description": "Network range of the red subnet (e.g. 172.16.137.0/24)"
+        "description": "IPv4 network range of the red subnet (e.g. 172.16.137.0/24)"
       },
       "defaultValue": "172.16.137.0/24"
     },
         "subnetRedv6": {
       "type": "string",
       "metadata": {
-        "description": "Network range of the red subnet (e.g. 172.16.137.0/24)"
-      }
+        "description": "IPv6 network range of the red subnet (e.g. fd4d:d0ea:8475:2::/64)"
+      },
+      "defaultValue": "fd4d:d0ea:8475:2::/64"
     },
     "subnetGreen": {
       "type": "string",
       "metadata": {
-        "description": "Network range of the green subnet (e.g. 172.16.138.0/24)"
+        "description": "IPv4 network range of the green subnet (e.g. 172.16.138.0/24)"
       },
       "defaultValue": "172.16.138.0/24"
     },
@@ -63,8 +68,9 @@
     "subnetGreenv6": {
       "type": "string",
       "metadata": {
-        "description": "Network range of the green subnet (e.g. 172.16.138.0/24)"
-      }
+        "description": "IPv6 network range of the green subnet (e.g. fd4d:d0ea:8475:3::/64)"
+      },
+      "defaultValue": "fd4d:d0ea:8475:3::/64"
     },
     "imageSKU": {
       "type": "string",
@@ -688,7 +694,7 @@
               "name": "HAProbe",
               "properties": {
                 "protocol": "Tcp",
-                "port": 65000,
+                "port": 691,
                 "intervalInSeconds": 5,
                 "numberOfProbes": 2
               }
